@@ -183,6 +183,10 @@ figure figcaption {
   line-height: 3em;
 }
 
+.figure-2 {
+  margin-top: 2em;
+}
+
 table {
   margin: 0 auto;
 
