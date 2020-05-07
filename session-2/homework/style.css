@@ -149,3 +149,76 @@ footer p {
 footer p a {
   color: white;
 }
+
+/*
+ * body.page-2 means "body that has a class page-2".
+ * So this whole selector means "body with class page-2, then
+ * inside there's a header, where this style applies".
+ */
+body.page-2 header {
+  background-image: url(assets/dark-pattern.jpg);
+}
+
+video {
+  /*
+   * By default, images and videos display "inline". This means that
+   * they are laid out as text:
+   *
+   *   blah blah blah [VIDEO] blah blah.
+   *
+   * For properties like width, margin, etc to work, this video needs to
+   * be displayed as a "block". This means it will be laid out as a separate
+   * block:
+   *
+   *    blah blah blah
+   *    [VIDEO]
+   *    blah blah blah
+   */
+  display: block;
+  margin: 0 auto;
+}
+
+figure figcaption {
+  text-align: center;
+  line-height: 3em;
+}
+
+table {
+  margin: 0 auto;
+
+  /*
+   * This is an odd one. By default, for historic reasons,
+   * table cells are separated, leaving space between the border
+   * of one and its neighbours. This rule cancels this and makes
+   * all cell borders merge together.
+   *
+   * Too many words to explain! The easiest way to see is removing
+   * this line and seeing the difference :-)
+   */
+  border-collapse: collapse;
+}
+
+/*
+ * You can have several selector separated by commas.
+ *
+ * This matches both "table th" and "table td". This way
+ * you can put here anything that is common to both.
+ */
+table th, table td {
+  padding: 0 1em;
+  line-height: 1.5em;
+}
+
+table th {
+  border: 1px solid black;
+  border-width: 0 1px;
+}
+
+table td {
+  border: 1px solid black;
+}
+
+/* Style odd rows. This is advanced stuff! */
+table tbody tr:nth-of-type(odd) {
+  background: #ddd;
+}
