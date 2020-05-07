@@ -7,7 +7,7 @@
 /*
  * By default, the whole page (the body) has a slight margin. If I don't
  * remove it (zero-ing it), it will show around the black background of
- * the header.
+ * the header and the footer.
  */
 body {
   margin: 0;
@@ -48,13 +48,18 @@ nav ul {
   list-style: none;
 }
 
-nav a {
-  /* Remove the underline */
+/*
+ * a.current-link means "'a' element that has a class 'current-link'".
+ * So this whole selector means "'nav', then inside there's an 'a'
+ * with class 'current-link', where this style applies".
+ */
+nav a.current-link {
+  color: black;
   text-decoration: none;
 }
 
 /*
- * Same thing, but at three levels!
+ * Three levels of nesting!
  * Don't abuse this technique ;-) It can get complicated quickly.
  */
 nav ul li {
@@ -144,17 +149,12 @@ footer p {
  * I already said that the text color in the footer was white.
  * However, link properties (color, underline, etc) are a bit "stickier"
  * than those of normal text. For this reason, they need to be
- * targeted separately.
+ * targeted specifically.
  */
 footer p a {
   color: white;
 }
 
-/*
- * body.page-2 means "body that has a class page-2".
- * So this whole selector means "body with class page-2, then
- * inside there's a header, where this style applies".
- */
 body.page-2 header {
   background-image: url(assets/dark-pattern.jpg);
 }
