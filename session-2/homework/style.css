@@ -1,0 +1,142 @@
+/*
+ * This is a comment in CSS. You can write anything here :-)
+ * I'll use comments to annotate these styles.
+ */
+
+
+/*
+ * By default, the whole page (the body) has a slight margin. If I don't
+ * remove it (zero-ing it), it will show around the black background of
+ * the header.
+ */
+body {
+  margin: 0;
+
+  /*
+   * If you have Helvetica, use it. If not, try Arial. If this also
+   * fails, just try the browser's default sans-serif font (look up sans-serif)
+   */
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/*
+ * This reads "a ul inside a nav". Or you can read in this order:
+ * "there's a nav with an ul inside, that's where we apply the rule".
+ * You can string up as many as you want, and mix and match tags,
+ * classes, ids, etc.
+ */
+nav ul {
+  display: flex;
+
+  /*
+   * Margin with two numbers means "top/bottom margin" "left/right margin".
+   * So top will be 0, bottom, 0, left 0.5em, right 0.5em.
+   * This can be done with many other things, like padding, border, etc.
+   *
+   * em is a unit of measure used in typography. 1em roughly translates as
+   * "width of the character M for the current font size". More info
+   * at https://en.wikipedia.org/wiki/Em_(typography)
+   */
+  margin: 0.3em 0;
+
+  /* Remove the bullet points of the list */
+  list-style: none;
+}
+
+nav a {
+  /* Remove the underline */
+  text-decoration: none;
+}
+
+/*
+ * Same thing, but at three levels!
+ * Don't abuse this technique ;-) It can get complicated quickly.
+ */
+nav ul li {
+  /* .5 is a short for 0.5 */
+  margin: 0 .5em;
+}
+
+header {
+  background: black;
+  color: white;
+
+  /* One number: applies for all four paddings: top, right, bottom, left. */
+  padding: 2em;
+}
+
+h1 {
+  /* Top 0, right 0, left 1em, bottom 0 */
+  margin: 0 0 1em 0;
+
+  text-align: center;
+}
+
+header p {
+  max-width: 30em;
+
+  /*
+   * 0 for top/bottom. For left/right, "auto" means to center.
+   * Notice that the max-width is 30em. When the browser is narrow
+   * and the paragraph is less than 30em wide, there will be no space
+   * left to center this block. When the browser is wider than 30em,
+   * the block will be centered. Eg: if the browser window is 40em
+   * wide, there will be 5em blank, the block (30em) and 5em blank,
+   * leaving this block centered.
+   */
+  margin: 0 auto;
+
+  /* Space between lines */
+  line-height: 1.5em;
+
+  text-align: center;
+}
+
+main ul {
+  list-style: none;
+}
+
+main img {
+  width: 13em;
+}
+
+main img.central-image {
+  width: 15em;
+}
+
+main ul {
+  width: 100%;
+  margin: 2em 0;
+  padding: 0;
+
+  /* For the flex properties, check out the guide https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+   * like I always do. I can't possibily remember all the options!
+   */
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+main p {
+  text-align: center;
+}
+
+footer {
+  background: black;
+  color: white;
+  padding: 3em 0;
+}
+
+footer p {
+  text-align: center;
+}
+
+/*
+ * I already said that the text color in the footer was white.
+ * However, link properties (color, underline, etc) are a bit "stickier"
+ * than those of normal text. For this reason, they need to be
+ * targeted separately.
+ */
+footer p a {
+  color: white;
+}
