@@ -4,7 +4,7 @@ Quick reminder: we use the words "parameter" and "argument" interchangeably. The
 
 ## Functions: standalone vs. "inside" other things
 
-In lesson 5 we covered how to create your own functions. Additionally, JavaScript comes with a number of functions that simplify a number of tasks that otherwise will be very complex, or simply impossible. You have already used some of them, such as `alert()`, `prompt()`, or `console.log()`. There are many more.
+In lesson 5 we covered how to create your own functions. Additionally, JavaScript comes with a number of functions that simplify tasks that otherwise will be very complex, or simply impossible. You have already used some of them, such as `alert()`, `prompt()`, or `console.log()`. There are many more.
 
 You may also have noticed that there are two types of functions: some work standalone, whereas other live "inside" other things.
 
@@ -34,9 +34,9 @@ Here's another example. In lesson 5, we saw how to create the following function
 ```js
 function verifyDiscount(name, age) {
   if (age < 18) {
-    return “Child discount applied for ” + name;
+    return "Child discount applied for " + name;
   } else {
-    return name + “ is not eligible for discount”;
+    return name + " is not eligible for discount";
   }
 }
 ```
@@ -73,7 +73,7 @@ console.log(shopping); // Should print ["milk", "oranges", "bread"]
 
 We say that the function `split` is a _applied to a string_ (`listWithCommas`), and receives one argument (`","`).
 
-The argument (the comma) tells what piece inside the string can be understood as "separator". We said "take this string, separate the bits in between commas, and make an array witht them".
+The argument (the comma) tells what piece inside the string can be understood as "separator". We said "take this string, separate the bits in between commas, and make an array with them".
 
 Try specifying a separator different than the comma. For example, letter "r". Try other applying it to other strings.
 
@@ -113,7 +113,7 @@ Here I'm telling it to join the elements with hyphens. I could use other separat
 You can also not specify a separator. In this case, it will use a comma. We say that it uses a comma _by default_:
 
 ```js
-console.log(shopping.join()) // Should print "coffe,tofu,spinash"
+console.log(shopping.join()) // Should print "coffe,tofu,spinach"
 ```
 
 Finally, similarly as how `split` could split by nothing (by empty text), we can join by nothing. Try the following: what do you get?
@@ -322,6 +322,6 @@ So with this new tool, and looking at our work on `reverseString()`, would you b
 
 Give it a go! Ask your instructors if you are stuck. Or show them your solution if you crack it!
 
-## Parts 3 to 5.
+## Parts 3 to 5
 
 Do all the above first. Does it make sense? Were you able to solve part 2? If you did all that, tell your instructors and we'll expand this guide to cover the rest of the exercise :-)
