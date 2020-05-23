@@ -321,3 +321,7 @@ console.log(orderedWords)
 So with this new tool, and looking at our work on `reverseString()`, would you be able to create a function `orderString()`?
 
 Give it a go! Ask your instructors if you are stuck. Or show them your solution if you crack it!
+
+## Parts 3 to 5.
+
+Do all the above first. Does it make sense? Were you able to solve part 2? If you did all that, tell your instructors and we'll expand this guide to cover the rest of the exercise :-)
